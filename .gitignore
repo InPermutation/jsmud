@@ -3,4 +3,5 @@ build
 include
 lib
 .Python
-*.pyc*.swp
+*.pyc
+*.swp
