@@ -3,11 +3,13 @@ from flask import session
 CONFUSED = u"Not sure what you meant."
 
 def interpret(line):
-    command, args = line.lower().split(maxsplit=1)
+    tmp = line.lower().split()
+    command = tmp[0]
+    args = tmp[1:]
     if command == "help":
-        return helpverb(args.split())
+        return helpverb(args)
     if command in ('move', 'go'):
-        return move(args.split()[0])
+        return move(args[0])
 
     return CONFUSED
 
