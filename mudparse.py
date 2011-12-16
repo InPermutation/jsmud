@@ -1,4 +1,3 @@
-import cmd
 from flask import session
 
 CONFUSED = u"Not sure what you meant."
